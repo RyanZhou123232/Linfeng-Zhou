@@ -37,7 +37,34 @@
     /* Motion */
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
     --dur: 0.45s;
+
+  /* Theme-specific surfaces */
+  --nav-bg: linear-gradient(to bottom, rgba(7, 8, 10, 0.72), rgba(7, 8, 10, 0.35));
+  --nav-bg-scrolled: rgba(10, 12, 16, 0.92);
+  --floating-bg: rgba(12, 14, 18, 0.92);
   }
+
+/* Light mode overrides (set by JS using data-theme on <body>) */
+body[data-theme="light"] {
+  --bg-deep: #f4f6fa;
+  --bg: #eef2f7;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.18);
+
+  --text: #101828;
+  --text-muted: #475467;
+  --text-faint: #667085;
+
+  --accent: #5e7fa8;
+  --accent-soft: rgba(94, 127, 168, 0.15);
+  --accent-glow: rgba(94, 127, 168, 0.28);
+
+  --nav-bg: linear-gradient(to bottom, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.75));
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.95);
+  --floating-bg: rgba(255, 255, 255, 0.95);
+}
   
   *,
   *::before,
@@ -70,6 +97,7 @@
     color: var(--text);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
+  transition: background-color 0.35s ease, color 0.35s ease;
   }
   
   body.is-loading {
@@ -177,7 +205,7 @@
     gap: 1rem;
     min-height: var(--header-h);
     padding: 0 min(1.25rem, 4vw);
-    background: linear-gradient(to bottom, rgba(7, 8, 10, 0.72), rgba(7, 8, 10, 0.35));
+  background: var(--nav-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
@@ -185,7 +213,7 @@
   }
   
   .site-header.is-scrolled .navbar {
-    background: rgba(10, 12, 16, 0.92);
+  background: var(--nav-bg-scrolled);
     border-bottom-color: var(--border);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   }
@@ -1155,7 +1183,7 @@
     height: 44px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border);
-    background: rgba(12, 14, 18, 0.92);
+  background: var(--floating-bg);
     color: var(--text);
     font-size: 1.15rem;
     line-height: 1;
@@ -1177,6 +1205,51 @@
     border-color: var(--accent);
     background: rgba(124, 156, 191, 0.1);
   }
+
+/* =============================================================================
+   Theme toggle (floating, bottom-right)
+   ============================================================================= */
+
+.theme-toggle {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 4.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--floating-bg);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s var(--ease), border-color 0.2s ease, background 0.2s ease;
+  z-index: 90;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.theme-toggle__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 520px) {
+  .theme-toggle {
+    right: 1rem;
+    bottom: 4.25rem;
+  }
+
+  .scroll-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
   
   /* =============================================================================
      Reveal on scroll — .reveal starts hidden; .is-visible animates in

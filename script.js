@@ -20,7 +20,9 @@
     const menuToggle = document.querySelector(".navbar__toggle");
     const primaryMenu = document.getElementById("primary-menu");
     const scrollTopBtn = document.getElementById("scroll-top");
+  const themeToggleBtn = document.getElementById("theme-toggle");
     const yearEl = document.getElementById("year");
+  const THEME_STORAGE_KEY = "ryan-site-theme";
   
     /** Read navbar height from CSS for scroll offset */
     function getScrollPadding() {
@@ -220,6 +222,43 @@
         yearEl.textContent = String(new Date().getFullYear());
       }
     }
+
+  /** Theme toggle: dark/light with localStorage persistence */
+  function applyTheme(theme) {
+    if (!themeToggleBtn) return;
+    document.body.setAttribute("data-theme", theme);
+    const isLight = theme === "light";
+    themeToggleBtn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+    themeToggleBtn.setAttribute("title", isLight ? "Switch to dark mode" : "Switch to light mode");
+    const icon = themeToggleBtn.querySelector(".theme-toggle__icon");
+    if (icon) icon.textContent = isLight ? "🌙" : "☀";
+  }
+
+  function initThemeToggle() {
+    if (!themeToggleBtn) return;
+
+    var savedTheme = null;
+    try {
+      savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    } catch (_) {
+      savedTheme = null;
+    }
+
+    const systemPrefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+    const initialTheme = savedTheme || (systemPrefersLight ? "light" : "dark");
+    applyTheme(initialTheme);
+
+    themeToggleBtn.addEventListener("click", function () {
+      const currentTheme = document.body.getAttribute("data-theme") === "light" ? "light" : "dark";
+      const nextTheme = currentTheme === "light" ? "dark" : "light";
+      applyTheme(nextTheme);
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      } catch (_) {
+        /* no-op when storage is unavailable */
+      }
+    });
+  }
   
     /** Combined scroll listener */
     function onScroll() {
@@ -236,6 +275,7 @@
       initReveal();
       initMobileMenu();
       initScrollTop();
+      initThemeToggle();
       initYear();
   
       onScroll();
