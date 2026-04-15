@@ -31,7 +31,7 @@
     return x * x * (3 - 2 * x);
   }
 
-  /** Interpolate floating H1 from viewport center (large) toward top-left (compact) */
+  /** Interpolate floating H1: large centered → compact centered under top (horizontal center fixed) */
   function updateFloatingName() {
     if (!siteNameEl || !heroEl || prefersReducedMotion) return;
 
@@ -44,24 +44,20 @@
     const ih = window.innerHeight;
 
     const startFont = Math.min(4.35 * 16, iw * 0.088);
-    const endFont = iw < 400 ? 14 : iw < 600 ? 15 : 16;
+    const endFont = iw < 400 ? 13 : iw < 600 ? 14 : 15;
     const fontPx = startFont + (endFont - startFont) * t;
 
-    const startY = ih * 0.33;
+    const startY = ih * 0.32;
     const endY = 30;
     const y = startY + (endY - startY) * t;
 
-    const startX = iw / 2;
-    const approxHalfWidth = endFont * 6.2;
-    const endCenterX = Math.min(24 + approxHalfWidth, iw * 0.46);
-    const x = startX + (endCenterX - startX) * t;
-
     siteNameEl.style.fontSize = fontPx + "px";
-    siteNameEl.style.left = x + "px";
+    siteNameEl.style.left = iw / 2 + "px";
     siteNameEl.style.top = y + "px";
     siteNameEl.style.transform = "translate(-50%, -50%)";
 
-    document.body.classList.toggle("is-name-collapsed", t > 0.82);
+    /* Ink when compact enough to sit on cream nav (avoid black-on-sage too early) */
+    document.body.classList.toggle("is-name-collapsed", t > 0.68);
   }
 
   function initLoadState() {
