@@ -3,28 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ryan Zhou — Carnegie Mellon Statistics & Machine Learning student focused on consulting, strategy, and data-driven roles." />
-  <title>Ryan Zhou | Strategy, Data & Execution</title>
+  <meta name="description" content="Linfeng (Ryan) Zhou — Carnegie Mellon Statistics & Machine Learning. Consulting, strategy, and data." />
+  <title>Linfeng (Ryan) Zhou | Strategy, Data &amp; Execution</title>
 
-  <!--
-    FAVICON: Replace with your favicon when ready.
-    Example: <link rel="icon" type="image/png" href="favicon.png" />
-  -->
+  <!-- Unicorn favicon — preserved from existing site -->
   <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=1t3xsvmGzWcV&format=png&color=000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="is-loading">
-  <!--
-    HEADSHOT: Optional hero image — add an <img> in .hero-visual if you want a photo
-    instead of or alongside the metric cards (see comment in hero section).
-  -->
-
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ========== STICKY NAVBAR ========== -->
   <header class="site-header" id="top">
     <nav class="navbar" aria-label="Primary">
-      <a class="navbar__brand" href="#hero">Ryan Zhou</a>
+      <a class="navbar__brand" href="#hero">LZ</a>
 
       <button
         class="navbar__toggle"
@@ -39,253 +33,93 @@
       </button>
 
       <ul class="navbar__links" id="primary-menu">
-        <li><a class="nav-link" href="#about" data-section="about">About</a></li>
-        <li><a class="nav-link" href="#focus" data-section="focus">Focus</a></li>
-        <li><a class="nav-link" href="#experience" data-section="experience">Experience</a></li>
-        <li><a class="nav-link" href="#projects" data-section="projects">Projects</a></li>
-        <li><a class="nav-link" href="#leadership" data-section="leadership">Leadership</a></li>
-        <li><a class="nav-link" href="#skills" data-section="skills">Skills</a></li>
+        <li><a class="nav-link" href="#hero" data-section="hero">Home</a></li>
+        <li><a class="nav-link" href="#job-experience" data-section="job-experience">Job Experience</a></li>
+        <li><a class="nav-link" href="#certifications" data-section="certifications">Certifications</a></li>
+        <li><a class="nav-link" href="#activities" data-section="activities">Activities</a></li>
+        <li><a class="nav-link" href="#interests" data-section="interests">Interests</a></li>
         <li><a class="nav-link" href="#contact" data-section="contact">Contact</a></li>
-        <li>
-          <!-- RESUME: Change href to your PDF path, e.g. assets/ryan-zhou-resume.pdf -->
-          <a class="btn btn--sm btn--outline nav-resume" href="resume.pdf">Resume</a>
-        </li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <!-- ========== HERO ========== -->
-    <section class="hero section" id="hero" data-section-id="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__grid">
-        <div class="hero__content reveal" data-reveal>
-          <!--
-            Alternate headlines (choose one for the page):
-            1. (Shown) A Carnegie Mellon student building at the intersection of strategy, data, and execution.
-            2. Turning ambiguity into structure — with quantitative rigor and operator-level follow-through.
-            3. CMU Statistics & Machine Learning — oriented toward consulting judgment and data-backed decisions.
-          -->
-          <p class="eyebrow">Statistics &amp; Machine Learning · Carnegie Mellon University</p>
-          <h1 class="hero__title">
-            A Carnegie Mellon student building at the intersection of strategy, data, and execution.
+    <section class="hero" id="hero" data-section-id="hero">
+      <div class="hero__aurora" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal" data-reveal>Statistics &amp; Machine Learning · Carnegie Mellon University</p>
+          <h1 class="hero__name reveal" data-reveal data-reveal-delay="60">
+            <span class="hero__name-line">Linfeng (Ryan) Zhou</span>
           </h1>
-          <p class="hero__lead">
-            I’m a first-year Statistics and Machine Learning student at Carnegie Mellon pursuing consulting and
-            data-driven roles, with experience spanning business analysis, research support, operations, and
-            founder-led execution.
+          <p class="hero__tagline reveal" data-reveal data-reveal-delay="120">
+            Building judgment at the intersection of strategy, data, and execution.
           </p>
-          <div class="hero__actions">
-            <!-- RESUME: Same PDF as navbar -->
-            <a class="btn btn--primary" href="resume.pdf">View Resume</a>
+          <p class="hero__intro reveal" data-reveal data-reveal-delay="180">
+            First-year student recruiting for consulting, analytics, and business-facing roles—comfortable with ambiguity,
+            quantitative rigor, and operator-level follow-through from research support to founder-led initiatives.
+          </p>
+          <p class="hero__cred reveal" data-reveal data-reveal-delay="200">
+            B.S. Statistics &amp; Machine Learning · Dean’s List · GPA 4.0/4.0
+          </p>
+          <div class="hero__actions reveal" data-reveal data-reveal-delay="240">
+            <a class="btn btn--primary" href="#job-experience">View Experience</a>
             <a class="btn btn--ghost" href="#contact">Contact Me</a>
           </div>
-          <dl class="hero__meta">
-            <div class="hero__meta-item">
-              <dt class="sr-only">University</dt>
-              <dd>Carnegie Mellon University</dd>
-            </div>
-            <div class="hero__meta-item">
-              <dt class="sr-only">Major</dt>
-              <dd>Statistics and Machine Learning</dd>
-            </div>
-            <div class="hero__meta-item">
-              <dt class="sr-only">Track</dt>
-              <dd>Consulting + Data</dd>
-            </div>
-            <div class="hero__meta-item">
-              <dt class="sr-only">Location</dt>
-              <dd>Pittsburgh, PA</dd>
-            </div>
-          </dl>
-        </div>
-
-        <aside class="hero__visual reveal" data-reveal data-reveal-delay="80">
-          <!-- Optional: add <img class="hero__photo" src="headshot.jpg" alt="Ryan Zhou" /> -->
-          <div class="metric-cluster">
-            <div class="metric-card metric-card--accent">
-              <span class="metric-card__label">Academic</span>
-              <span class="metric-card__value">GPA 4.0 / 4.0</span>
-              <span class="metric-card__hint">Dean’s List</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-card__label">Signal</span>
-              <span class="metric-card__value">Founder Experience</span>
-              <span class="metric-card__hint">Built &amp; scaled initiatives</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-card__label">Research</span>
-              <span class="metric-card__value">HCI Lab RA</span>
-              <span class="metric-card__hint">CMU · Augmented Design Lab</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-card__label">Work</span>
-              <span class="metric-card__value">Consulting + Data Projects</span>
-              <span class="metric-card__hint">Virtual programs &amp; analysis</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ========== ABOUT ========== -->
-    <section class="section section--tight" id="about" data-section-id="about">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">About</h2>
-          <p class="section__subtitle">Intellectual rigor, business judgment, and follow-through.</p>
-        </header>
-        <div class="about__intro reveal" data-reveal>
-          <p>
-            I’m a first-year student at Carnegie Mellon studying Statistics and Machine Learning, recruiting for
-            consulting, analytics, strategy, and data-oriented internships. I like problems where the situation is
-            unclear, the information is messy, and the answer has to be both analytically sound and communicable to
-            decision-makers. My background blends academic discipline with operational experience, research support,
-            and entrepreneurial initiative—so I’m most energized when structured thinking, quantitative tools, and
-            execution all have to show up at once.
-          </p>
-        </div>
-        <div class="card-grid card-grid--3">
-          <article class="info-card reveal" data-reveal>
-            <h3 class="info-card__title">Analytical Foundation</h3>
-            <p class="info-card__text">
-              Training in statistics and machine learning with a focus on careful reasoning, modeling fundamentals, and
-              clear interpretation—not just outputs.
-            </p>
-          </article>
-          <article class="info-card reveal" data-reveal>
-            <h3 class="info-card__title">Business Problem Solving</h3>
-            <p class="info-card__text">
-              Experience framing operational issues, improving workflows, and translating findings into practical
-              recommendations stakeholders can act on.
-            </p>
-          </article>
-          <article class="info-card reveal" data-reveal>
-            <h3 class="info-card__title">Founder Mentality</h3>
-            <p class="info-card__text">
-              Comfortable owning outcomes end-to-end: scoping work, coordinating teams, running events, and iterating
-              under real-world constraints.
-            </p>
-          </article>
         </div>
       </div>
     </section>
 
-    <div class="section-rule" aria-hidden="true"></div>
-
-    <!-- ========== WHAT I'M LOOKING FOR ========== -->
-    <section class="section" id="focus" data-section-id="focus">
+    <!-- ========== JOB EXPERIENCE ========== -->
+    <section class="section section--alt" id="job-experience" data-section-id="job-experience">
       <div class="container">
         <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">What I’m Looking For</h2>
-          <p class="section__subtitle">Roles where strategy, data, and communication converge.</p>
-        </header>
-        <p class="focus__intro reveal" data-reveal>
-          I’m targeting internships that reward structured problem solving, quantitative fluency, and crisp
-          communication—especially environments where I can support decisions with analysis while staying close to how
-          work actually gets done.
-        </p>
-
-        <div class="card-grid card-grid--2">
-          <article class="role-card reveal" data-reveal>
-            <span class="role-card__tag">Consulting / Strategy</span>
-            <h3 class="role-card__title">Hypothesis-driven work</h3>
-            <p class="role-card__text">
-              Engagements that require issue trees, synthesis across stakeholders, and slide-ready communication—paired
-              with a bias toward measurable impact.
-            </p>
-          </article>
-          <article class="role-card reveal" data-reveal>
-            <span class="role-card__tag">Business Analyst / Operations</span>
-            <h3 class="role-card__title">Process + performance</h3>
-            <p class="role-card__text">
-              Roles focused on clarifying workflows, improving throughput, and connecting operational reality to
-              leadership priorities.
-            </p>
-          </article>
-          <article class="role-card reveal" data-reveal>
-            <span class="role-card__tag">Data Analytics</span>
-            <h3 class="role-card__title">Insight with judgment</h3>
-            <p class="role-card__text">
-              Analytics work where the goal isn’t a chart—it’s a decision: cleaner metrics, clearer drivers, and
-              recommendations grounded in the business context.
-            </p>
-          </article>
-          <article class="role-card reveal" data-reveal>
-            <span class="role-card__tag">Data Science / Applied Analytics</span>
-            <h3 class="role-card__title">Modeling with context</h3>
-            <p class="role-card__text">
-              Applied projects that combine data prep, modeling fundamentals, and evaluation—communicated in a way
-              non-specialists can trust and use.
-            </p>
-          </article>
-        </div>
-
-        <div class="focus__note reveal" data-reveal>
-          <p class="focus__note-title">What I bring</p>
-          <ul class="pill-list" aria-label="Strengths">
-            <li>Structured problem solving</li>
-            <li>Quantitative foundation</li>
-            <li>Communication &amp; synthesis</li>
-            <li>Execution under ambiguity</li>
-            <li>Founder / operator energy</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-rule" aria-hidden="true"></div>
-
-    <!-- ========== EXPERIENCE ========== -->
-    <section class="section" id="experience" data-section-id="experience">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Experience</h2>
-          <p class="section__subtitle">Operations, research support, and cross-functional execution.</p>
+          <h2 class="section__title">Job Experience</h2>
+          <p class="section__subtitle">Internships, research, and professional roles—structured for quick scanning.</p>
         </header>
 
         <ol class="timeline">
           <li class="timeline__item reveal" data-reveal>
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__card">
-              <div class="timeline__head">
-                <h3 class="timeline__title">Law Assistant</h3>
-                <p class="timeline__org">China Commercial Lam Lee Lai Law Firm</p>
-                <p class="timeline__meta">Shenzhen, China · Jan 2025 – Mar 2025</p>
+            <article class="exp-card">
+              <div class="exp-card__head">
+                <h3 class="exp-card__title">Market Research Intern</h3>
+                <p class="exp-card__org">Fumount — boutique incense brand (China)</p>
+                <p class="exp-card__meta">Shenzhen, China · Apr 2025 – Present</p>
               </div>
               <ul class="bullet-list">
-                <li>Identified bottlenecks in client document retrieval and partner approval loops that slowed routine work.</li>
-                <li>Partnered with firm leadership to support rollout of a self-service access model that reduced manual gatekeeping.</li>
-                <li>Standardized document access and tracking to improve transparency and turnaround time across teams.</li>
-                <li>Helped reduce average retrieval effort by roughly 20 minutes per employee per day—freeing capacity for higher-value work.</li>
+                <li>Supported online marketing campaigns that generated roughly 1M RMB cumulative turnover through private-domain traffic channels.</li>
+                <li>Researched the Shopify ecosystem to inform overseas expansion strategy for the brand.</li>
+                <li>Led a technical team to build the company website with HTML, CSS, and JavaScript—using AI-assisted workflows and GitHub-based collaboration to improve delivery speed.</li>
+                <li>Benchmarked domestic competitors on pricing, market size, and consumer profiles; helped define a premium, customized overseas positioning.</li>
+                <li>Coordinated with e-commerce platforms and industry KOLs for partnerships, private-domain growth, and promotions that exceeded sales expectations.</li>
               </ul>
-            </div>
+            </article>
           </li>
 
           <li class="timeline__item reveal" data-reveal>
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__card">
-              <div class="timeline__head">
-                <h3 class="timeline__title">Research Assistant</h3>
-                <p class="timeline__org">CMU Human-Computer Interaction Institute — Augmented Design Lab</p>
-                <p class="timeline__meta">Pittsburgh, United States · Since Jan 2025</p>
+            <article class="exp-card">
+              <div class="exp-card__head">
+                <h3 class="exp-card__title">Research Assistant</h3>
+                <p class="exp-card__org">CMU Human-Computer Interaction Institute — Augmented Design Lab</p>
+                <p class="exp-card__meta">Pittsburgh, PA · Jan 2025 – Present</p>
               </div>
               <ul class="bullet-list">
-                <li>Supports HCI research through disciplined study coordination and high-quality data collection.</li>
-                <li>Distributes surveys, manages participant touchpoints, and tracks responses across study phases.</li>
-                <li>Organizes experimental data and prepares datasets for analysis with attention to consistency and documentation.</li>
-                <li>Collaborates with researchers to tighten protocols and improve end-to-end data collection workflows.</li>
+                <li>Supports HCI research through disciplined study coordination, survey distribution, and high-quality data collection.</li>
+                <li>Manages participant touchpoints, tracks responses across study phases, and collates experimental outputs.</li>
+                <li>Organizes and preprocesses datasets for analysis with consistent documentation and quality control.</li>
+                <li>Collaborates with researchers to streamline protocols and improve end-to-end data collection workflows.</li>
               </ul>
-            </div>
+            </article>
           </li>
 
           <li class="timeline__item reveal" data-reveal>
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__card">
-              <div class="timeline__head">
-                <h3 class="timeline__title">Project Manager</h3>
-                <p class="timeline__org">Lighten Education</p>
-                <p class="timeline__meta">Shenzhen, China · Apr 2025 – Sep 2025</p>
+            <article class="exp-card">
+              <div class="exp-card__head">
+                <h3 class="exp-card__title">Project Manager — Student Interview Program</h3>
+                <p class="exp-card__org">Lighten Education</p>
+                <p class="exp-card__meta">Shenzhen, China · Apr 2025 – Sep 2025</p>
               </div>
               <ul class="bullet-list">
                 <li>Led development of a student interview content initiative from concept through distribution.</li>
@@ -293,241 +127,192 @@
                 <li>Owned filming, editing, and logistics—coordinating contributors to ship on schedule.</li>
                 <li>Achieved roughly 50–60% average completion rates across targeted private distribution channels.</li>
               </ul>
-            </div>
+            </article>
+          </li>
+
+          <li class="timeline__item reveal" data-reveal>
+            <article class="exp-card">
+              <div class="exp-card__head">
+                <h3 class="exp-card__title">Law Assistant</h3>
+                <p class="exp-card__org">China Commercial Lam Lee Lai Law Firm</p>
+                <p class="exp-card__meta">Shenzhen, China · Jan 2025 – Mar 2025</p>
+              </div>
+              <ul class="bullet-list">
+                <li>Analyzed bottlenecks in internal client data and document retrieval processes.</li>
+                <li>Supported partners in launching a self-service access system to reduce manual approvals and improve retrieval efficiency.</li>
+                <li>Standardized document management and tracking protocols—improving transparency and turnaround time.</li>
+                <li>Reduced average document retrieval effort by roughly 20 minutes per employee per day.</li>
+              </ul>
+            </article>
           </li>
         </ol>
       </div>
     </section>
 
-    <div class="section-rule" aria-hidden="true"></div>
-
-    <!-- ========== PROJECTS / VIRTUAL EXPERIENCE ========== -->
-    <section class="section" id="projects" data-section-id="projects">
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section class="section" id="certifications" data-section-id="certifications">
       <div class="container">
         <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Projects &amp; Virtual Programs</h2>
-          <p class="section__subtitle">Consulting-style analysis, financial diagnostics, and applied analytics.</p>
+          <h2 class="section__title">Certifications</h2>
+          <p class="section__subtitle">Virtual programs and simulations—consulting, analytics, and applied data science.</p>
         </header>
 
-        <div class="card-grid card-grid--2">
-          <article class="project-card reveal" data-reveal>
-            <header class="project-card__head">
-              <span class="project-card__category">Consulting</span>
-              <h3 class="project-card__title">PwC Management Consulting Virtual Project</h3>
-            </header>
+        <div class="cert-grid">
+          <article class="cert-card reveal" data-reveal>
+            <div class="cert-card__accent" aria-hidden="true"></div>
+            <h3 class="cert-card__name">PwC Management Consulting Virtual Project</h3>
+            <p class="cert-card__issuer">PwC · Online</p>
             <ul class="bullet-list bullet-list--compact">
-              <li>Built diligence-style analysis around a transaction context, including synergy thinking and structured implications.</li>
-              <li>Developed a 14-slide storyline with flexible modeling and concise executive-ready updates.</li>
-              <li>Emphasized clarity: crisp hypotheses, supported claims, and decision-useful synthesis.</li>
-            </ul>
-            <p class="takeaway"><span class="takeaway__label">Key takeaway:</span> Consulting communication is a deliverable—structure drives credibility.</p>
-            <!-- PROJECT LINK: <a class="text-link" href="#">View materials</a> -->
-          </article>
-
-          <article class="project-card reveal" data-reveal>
-            <header class="project-card__head">
-              <span class="project-card__category">Consulting / Analytics</span>
-              <h3 class="project-card__title">Oliver Wyman Integrated Consulting Group Virtual Project</h3>
-            </header>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Analyzed a global insurance client context using financial statement review and performance diagnostics.</li>
-              <li>Applied regression and variance-style thinking to explain gaps and drivers.</li>
-              <li>Contributed to dashboard-style outputs and final presentation deliverables for stakeholder review.</li>
-            </ul>
-            <p class="takeaway"><span class="takeaway__label">Key takeaway:</span> Strong diagnostics turn financial noise into a prioritized narrative.</p>
-          </article>
-
-          <article class="project-card reveal" data-reveal>
-            <header class="project-card__head">
-              <span class="project-card__category">Data Science</span>
-              <h3 class="project-card__title">Lloyds Banking Group Virtual Project</h3>
-            </header>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Built a customer churn prediction workflow with rigorous preprocessing and feature engineering.</li>
-              <li>Trained a Random Forest model with tuning and interpretation of feature importance.</li>
-              <li>Achieved ROC-AUC of 0.82; translated results into practical business-facing insights.</li>
-            </ul>
-            <p class="takeaway"><span class="takeaway__label">Key takeaway:</span> Model performance only matters when the story connects to action.</p>
-          </article>
-
-          <article class="project-card reveal" data-reveal>
-            <header class="project-card__head">
-              <span class="project-card__category">Data / Analytics</span>
-              <h3 class="project-card__title">BCG X Data Science Virtual Project</h3>
-            </header>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Executed end-to-end churn analytics: cleaning, exploratory analysis, modeling, and evaluation.</li>
-              <li>Focused on defensible metrics and clear comparison of candidate approaches.</li>
-              <li>Consolidated implications into a strategic recommendation summary suited for decision-makers.</li>
-            </ul>
-            <p class="takeaway"><span class="takeaway__label">Key takeaway:</span> Analytics wins when recommendations are as tight as the methods.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-rule" aria-hidden="true"></div>
-
-    <!-- ========== LEADERSHIP & ACTIVITIES ========== -->
-    <section class="section" id="leadership" data-section-id="leadership">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Leadership &amp; Activities</h2>
-          <p class="section__subtitle">Initiative at scale—building teams, partnerships, and real-world outcomes.</p>
-        </header>
-
-        <div class="leadership-grid">
-          <article class="lead-card reveal" data-reveal>
-            <div class="lead-card__top">
-              <h3 class="lead-card__title">Founder</h3>
-              <p class="lead-card__org">YouMe Youth Music</p>
-              <p class="lead-card__meta">Shenzhen, China · Since Feb 2025</p>
-            </div>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Founded a student musician platform connecting bands with venues, brands, and sponsors.</li>
-              <li>Led artist recruitment, partnerships, event planning, on-site execution, and commercialization experiments.</li>
-              <li>Delivered 11 offline events, including a flagship experience with 1,000+ attendees.</li>
-              <li>Grew a 400+ member community and expanded to four cities through decentralized local teams.</li>
+              <li>Due diligence for a simulated M&amp;A project: business and financial analysis, transaction risks, and synergy value.</li>
+              <li>Delivered a 14-slide analytical deck with forecasting models, scenario analysis, and executive-ready progress updates.</li>
+              <li>Exposure to flexible modeling and concise structured communication across workstreams.</li>
             </ul>
           </article>
 
-          <article class="lead-card reveal" data-reveal>
-            <div class="lead-card__top">
-              <h3 class="lead-card__title">Founder</h3>
-              <p class="lead-card__org">HuaLong Youth Basketball Boot Camp</p>
-              <p class="lead-card__meta">HuaLong, China · Since Apr 2023</p>
-            </div>
+          <article class="cert-card reveal" data-reveal>
+            <div class="cert-card__accent" aria-hidden="true"></div>
+            <h3 class="cert-card__name">Oliver Wyman Integrated Consulting Group Virtual Project</h3>
+            <p class="cert-card__issuer">Oliver Wyman · Global insurance client · Online</p>
             <ul class="bullet-list bullet-list--compact">
-              <li>Founded and operated a youth basketball camp with full accountability for programming quality and safety.</li>
-              <li>Designed training curricula and executed sessions with consistent standards week to week.</li>
-              <li>Coordinated coaches, volunteers, logistics, and day-of operations across a growing participant base.</li>
-              <li>Supported 300+ students; the program culminated in a city-level championship outcome.</li>
+              <li>Business diagnostics and financial statement analysis using regression and variance-style methods to explain performance gaps.</li>
+              <li>Built a client-facing visual dashboard and compiled findings into a formal presentation deck.</li>
+            </ul>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <div class="cert-card__accent" aria-hidden="true"></div>
+            <h3 class="cert-card__name">Lloyds Banking Group Virtual Project</h3>
+            <p class="cert-card__issuer">Lloyds Banking Group · Online</p>
+            <ul class="bullet-list bullet-list--compact">
+              <li>End-to-end customer churn workflow: preprocessing, feature engineering, and modeling in Python (pandas, scikit-learn).</li>
+              <li>Random Forest with tuning and feature-importance analysis; ROC-AUC 0.82.</li>
+              <li>Translated model outputs into practical business-facing insights.</li>
+            </ul>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <div class="cert-card__accent" aria-hidden="true"></div>
+            <h3 class="cert-card__name">BCG X Data Science Virtual Project</h3>
+            <p class="cert-card__issuer">BCG X · PowerCo churn scenario · Online</p>
+            <ul class="bullet-list bullet-list--compact">
+              <li>Data cleaning and EDA in Python; handled missing values and outliers; structured data for modeling.</li>
+              <li>Built models to predict churn for PowerCo; analyzed drivers including pricing, service quality, and regional effects.</li>
+              <li>Evaluated performance and delivered a client-style summary with data-driven recommendations.</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <div class="section-rule" aria-hidden="true"></div>
-
-    <!-- ========== SKILLS ========== -->
-    <section class="section" id="skills" data-section-id="skills">
+    <!-- ========== ACTIVITIES ========== -->
+    <section class="section section--alt" id="activities" data-section-id="activities">
       <div class="container">
         <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Skills &amp; Interests</h2>
-          <p class="section__subtitle">Tools and strengths—presented clearly, without exaggeration.</p>
+          <h2 class="section__title">Activities</h2>
+          <p class="section__subtitle">Leadership, initiative, and community building outside of formal employment.</p>
         </header>
 
-        <div class="skills-grid">
-          <div class="skill-block reveal" data-reveal>
-            <h3 class="skill-block__title">Technical</h3>
-            <ul class="pill-list pill-list--wrap">
-              <li>Python</li>
-              <li>Data Analysis</li>
-              <li>Statistical Modeling</li>
-              <li>Machine Learning Fundamentals</li>
+        <div class="activity-grid">
+          <article class="activity-card reveal" data-reveal>
+            <div class="activity-card__icon" aria-hidden="true">◇</div>
+            <h3 class="activity-card__title">Founder</h3>
+            <p class="activity-card__org">YouMe Youth Music</p>
+            <p class="activity-card__meta">Shenzhen, China · Feb 2025 – Present</p>
+            <ul class="bullet-list bullet-list--compact">
+              <li>Founded a student musician platform connecting bands with venues, brands, and sponsors (non-profit).</li>
+              <li>Led recruitment, partnerships, event planning, on-site execution, and monetization experiments.</li>
+              <li>Delivered 11 offline events, including a flagship with 1,000+ attendees; grew a 400+ member community.</li>
+              <li>Scaled to four cities through decentralized local organizing teams.</li>
             </ul>
-          </div>
-          <div class="skill-block reveal" data-reveal>
-            <h3 class="skill-block__title">Analytical</h3>
-            <ul class="pill-list pill-list--wrap">
-              <li>Structured Problem Solving</li>
-              <li>Hypothesis Testing Mindset</li>
-              <li>Research Support</li>
-              <li>Insight Synthesis</li>
+          </article>
+
+          <article class="activity-card reveal" data-reveal>
+            <div class="activity-card__icon" aria-hidden="true">◆</div>
+            <h3 class="activity-card__title">Founder</h3>
+            <p class="activity-card__org">HuaLong Youth Basketball Boot Camp</p>
+            <p class="activity-card__meta">HuaLong, China · Apr 2023 – Present</p>
+            <ul class="bullet-list bullet-list--compact">
+              <li>Founded and operated a youth basketball camp with accountability for programming quality and safety.</li>
+              <li>Designed curricula and executed sessions with consistent standards week to week.</li>
+              <li>Coordinated coaches, volunteers, logistics, and day-of operations for a growing participant base.</li>
+              <li>Supported 300+ students; program culminated in a city-level championship outcome.</li>
             </ul>
-          </div>
-          <div class="skill-block reveal" data-reveal>
-            <h3 class="skill-block__title">Tools</h3>
-            <ul class="pill-list pill-list--wrap">
-              <li>Excel</li>
-              <li>PowerPoint</li>
-              <li>Presentation Development</li>
-            </ul>
-          </div>
-          <div class="skill-block reveal" data-reveal>
-            <h3 class="skill-block__title">Languages</h3>
-            <ul class="pill-list pill-list--wrap">
-              <li>Mandarin — Native</li>
-              <li>English — Fluent</li>
-            </ul>
-          </div>
-          <div class="skill-block skill-block--wide reveal" data-reveal>
-            <h3 class="skill-block__title">Interests</h3>
-            <ul class="pill-list pill-list--wrap">
-              <li>Basketball</li>
-              <li>Electric Guitar</li>
-              <li>Sailing</li>
-              <li>Eastern Art</li>
-            </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <div class="section-rule" aria-hidden="true"></div>
+    <!-- ========== INTERESTS ========== -->
+    <section class="section" id="interests" data-section-id="interests">
+      <div class="container">
+        <header class="section__header reveal" data-reveal>
+          <h2 class="section__title">Interests</h2>
+          <p class="section__subtitle">Personal dimensions that complement analytical and professional work.</p>
+        </header>
+
+        <div class="interests-wrap reveal" data-reveal>
+          <ul class="interest-tags" aria-label="Personal interests">
+            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Basketball</li>
+            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Electric guitar</li>
+            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Sailing</li>
+            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Eastern art</li>
+            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Music &amp; live events</li>
+            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Branding &amp; positioning</li>
+            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Business strategy</li>
+          </ul>
+          <p class="interests-note">
+            Languages: Mandarin (native) · English (fluent, TOEFL 114/120)
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- ========== CONTACT ========== -->
     <section class="section section--contact" id="contact" data-section-id="contact">
       <div class="container">
         <header class="section__header reveal" data-reveal>
           <h2 class="section__title">Contact</h2>
-          <p class="section__subtitle">Let’s talk if the work sits at the intersection of strategy, data, and execution.</p>
+          <p class="section__subtitle">Open to internships and conversations in consulting, analytics, and strategy.</p>
         </header>
 
-        <div class="contact-layout">
-          <div class="contact-card reveal" data-reveal>
-            <p class="contact-card__intro">
-              I’m open to conversations about consulting, analytics, data-driven internships, and opportunities where
-              rigorous thinking has to translate into real-world progress.
-            </p>
-            <ul class="contact-list">
-              <li>
-                <span class="contact-list__label">Email</span>
-                <a href="mailto:zhouryan63@gmail.com">zhouryan63@gmail.com</a>
-              </li>
-              <li>
-                <span class="contact-list__label">Phone</span>
-                <a href="tel:+14126809048">(+1) 412-680-9048</a>
-              </li>
-              <li>
-                <span class="contact-list__label">LinkedIn</span>
-                <!-- LINKEDIN: Replace href with your profile URL and remove data-placeholder-link -->
-                <a href="#" id="linkedin-placeholder" data-placeholder-link>linkedin.com/in/your-profile</a>
-              </li>
-            </ul>
-            <div class="contact-card__actions">
-              <a class="btn btn--primary" href="resume.pdf">Download Resume</a>
-              <a class="btn btn--ghost" href="mailto:zhouryan63@gmail.com?subject=Hello%20Ryan">Email Ryan</a>
-            </div>
+        <div class="contact-panel reveal" data-reveal>
+          <ul class="contact-links">
+            <li>
+              <span class="contact-links__label">Email</span>
+              <a href="mailto:zhouryan63@gmail.com">zhouryan63@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-links__label">Phone</span>
+              <a href="tel:+14126809048">(+1) 412-680-9048</a>
+            </li>
+            <li>
+              <span class="contact-links__label">LinkedIn</span>
+              <a href="#" id="linkedin-placeholder" data-placeholder-link>linkedin.com/in/your-profile</a>
+            </li>
+            <li>
+              <span class="contact-links__label">GitHub</span>
+              <a href="https://github.com/Linfeng-Zhou" target="_blank" rel="noopener noreferrer">github.com/Linfeng-Zhou</a>
+            </li>
+          </ul>
+          <div class="contact-actions">
+            <a class="btn btn--primary" href="mailto:zhouryan63@gmail.com?subject=Hello%20Ryan">Email me</a>
+            <a class="btn btn--ghost" href="#hero">Back to top</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <p class="site-footer__name">Ryan Zhou</p>
-      <p class="site-footer__school">Carnegie Mellon University</p>
-      <p class="site-footer__tech">Built with HTML, CSS, and JavaScript</p>
-      <p class="site-footer__copy">&copy; <span id="year"></span> Ryan Zhou. All rights reserved.</p>
+      <p class="site-footer__line"><strong>Linfeng (Ryan) Zhou</strong> · Carnegie Mellon University</p>
+      <p class="site-footer__line site-footer__muted">Built with HTML, CSS, and JavaScript</p>
+      <p class="site-footer__copy">&copy; <span id="year"></span> Linfeng (Ryan) Zhou</p>
     </div>
   </footer>
 
   <button type="button" class="scroll-top" id="scroll-top" aria-label="Back to top" title="Back to top">
     <span aria-hidden="true">↑</span>
-  </button>
-
-  <button
-    type="button"
-    class="theme-toggle"
-    id="theme-toggle"
-    aria-label="Switch to light mode"
-    title="Toggle dark/light mode"
-  >
-    <span class="theme-toggle__icon" aria-hidden="true">☀</span>
   </button>
 
   <script src="script.js" defer></script>
