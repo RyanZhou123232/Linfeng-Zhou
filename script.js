@@ -1,12 +1,7 @@
 /**
- * Linfeng (Ryan) Zhou — portfolio interactions
- * - Initial load fade-in
- * - Sticky navbar: solid background on scroll
- * - Smooth in-page scrolling with fixed-header offset
- * - Active nav highlight while scrolling
- * - Reveal-on-scroll for .reveal elements
- * - Mobile menu toggle
- * - Scroll-to-top button
+ * Linfeng (Ryan) Zhou — portfolio
+ * - Floating name: large centered → shrinks to top bar on scroll (inverse when scrolling up)
+ * - Sticky navbar state, smooth scroll, scroll-spy, reveal, mobile menu, scroll-top
  */
 
 (function () {
@@ -14,43 +9,79 @@
 
   const header = document.querySelector(".site-header");
   const navLinks = document.querySelectorAll(".nav-link[data-section]");
-  /** Section ids in page order — scroll spy */
-  const SECTION_ORDER = [
-    "hero",
-    "job-experience",
-    "certifications",
-    "activities",
-    "interests",
-    "contact",
-  ];
+  const SECTION_ORDER = ["hero", "job-experience", "certifications", "hobbies", "contact"];
   const revealEls = document.querySelectorAll("[data-reveal]");
   const menuToggle = document.querySelector(".navbar__toggle");
   const primaryMenu = document.getElementById("primary-menu");
   const scrollTopBtn = document.getElementById("scroll-top");
   const yearEl = document.getElementById("year");
+  const heroEl = document.getElementById("hero");
+  const siteNameEl = document.getElementById("site-name");
+
+  const prefersReducedMotion =
+    typeof window.matchMedia === "function" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function getScrollPadding() {
-    const h = header ? header.offsetHeight : 72;
-    return h + 12;
+    const h = header ? header.offsetHeight : 64;
+    return h + 8;
+  }
+
+  function smoothstep(t) {
+    const x = Math.max(0, Math.min(1, t));
+    return x * x * (3 - 2 * x);
+  }
+
+  /** Interpolate floating H1 from viewport center (large) toward top-left (compact) */
+  function updateFloatingName() {
+    if (!siteNameEl || !heroEl || prefersReducedMotion) return;
+
+    const scrollY = window.scrollY || window.pageYOffset;
+    const range = Math.min(heroEl.offsetHeight * 0.52, 460);
+    let t = range > 0 ? scrollY / range : 0;
+    t = smoothstep(Math.min(1, t));
+
+    const iw = window.innerWidth;
+    const ih = window.innerHeight;
+
+    const startFont = Math.min(4.35 * 16, iw * 0.088);
+    const endFont = iw < 400 ? 14 : iw < 600 ? 15 : 16;
+    const fontPx = startFont + (endFont - startFont) * t;
+
+    const startY = ih * 0.33;
+    const endY = 30;
+    const y = startY + (endY - startY) * t;
+
+    const startX = iw / 2;
+    const approxHalfWidth = endFont * 6.2;
+    const endCenterX = Math.min(24 + approxHalfWidth, iw * 0.46);
+    const x = startX + (endCenterX - startX) * t;
+
+    siteNameEl.style.fontSize = fontPx + "px";
+    siteNameEl.style.left = x + "px";
+    siteNameEl.style.top = y + "px";
+    siteNameEl.style.transform = "translate(-50%, -50%)";
+
+    document.body.classList.toggle("is-name-collapsed", t > 0.82);
   }
 
   function initLoadState() {
     requestAnimationFrame(function () {
       document.body.classList.remove("is-loading");
       document.body.classList.add("is-ready");
+      updateFloatingName();
     });
   }
 
   function onScrollNavbar() {
     if (!header) return;
     const y = window.scrollY || window.pageYOffset;
-    header.classList.toggle("is-scrolled", y > 24);
+    header.classList.toggle("is-scrolled", y > 16);
   }
 
   function onScrollTopButton() {
     if (!scrollTopBtn) return;
     const y = window.scrollY || window.pageYOffset;
-    scrollTopBtn.classList.toggle("is-visible", y > 420);
+    scrollTopBtn.classList.toggle("is-visible", y > 400);
   }
 
   function scrollToHash(hash, { updateHistory = true } = {}) {
@@ -100,7 +131,7 @@
     const y = window.scrollY || window.pageYOffset;
     const line = getScrollPadding();
 
-    if (y < 96) {
+    if (y < 80) {
       setActiveNav("hero");
       return;
     }
@@ -111,7 +142,7 @@
       const el = document.getElementById(id);
       if (!el) return;
       const top = el.getBoundingClientRect().top;
-      if (top <= line + 16) {
+      if (top <= line + 12) {
         activeId = id;
       }
     });
@@ -119,6 +150,7 @@
     setActiveNav(activeId);
   }
 
+  let revealTicking = false;
   function initReveal() {
     if (!revealEls.length) return;
 
@@ -138,7 +170,7 @@
           obs.unobserve(entry.target);
         });
       },
-      { root: null, threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
+      { root: null, threshold: 0.08, rootMargin: "0px 0px -5% 0px" }
     );
 
     revealEls.forEach(function (el) {
@@ -206,10 +238,19 @@
     }
   }
 
+  let scrollTick = false;
   function onScroll() {
     onScrollNavbar();
     onScrollTopButton();
     updateActiveNavFromScroll();
+
+    if (!scrollTick) {
+      window.requestAnimationFrame(function () {
+        updateFloatingName();
+        scrollTick = false;
+      });
+      scrollTick = true;
+    }
   }
 
   function init() {
@@ -222,11 +263,18 @@
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener(
+      "resize",
+      function () {
+        updateFloatingName();
+      },
+      { passive: true }
+    );
 
     if (window.location.hash) {
       setTimeout(function () {
         scrollToHash(window.location.hash, { updateHistory: false });
-      }, 50);
+      }, 60);
     }
   }
 

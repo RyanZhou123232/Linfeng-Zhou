@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Linfeng (Ryan) Zhou — Carnegie Mellon Statistics & Machine Learning. Consulting, strategy, and data." />
-  <title>Linfeng (Ryan) Zhou | Strategy, Data &amp; Execution</title>
+  <meta name="description" content="Linfeng (Ryan) Zhou — Carnegie Mellon Statistics & Machine Learning." />
+  <title>Linfeng (Ryan) Zhou</title>
 
-  <!-- Unicorn favicon — preserved from existing site -->
   <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=1t3xsvmGzWcV&format=png&color=000000" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="is-loading">
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Single H1: morphs from center (large) to top bar (small) via script.js -->
+  <h1 class="site-name" id="site-name">
+    <a class="site-name__link" href="#hero">Linfeng (Ryan) Zhou</a>
+  </h1>
+
   <header class="site-header" id="top">
     <nav class="navbar" aria-label="Primary">
-      <a class="navbar__brand" href="#hero">LZ</a>
+      <div class="navbar__spacer" aria-hidden="true"></div>
 
       <button
         class="navbar__toggle"
@@ -34,115 +38,119 @@
 
       <ul class="navbar__links" id="primary-menu">
         <li><a class="nav-link" href="#hero" data-section="hero">Home</a></li>
-        <li><a class="nav-link" href="#job-experience" data-section="job-experience">Job Experience</a></li>
+        <li><a class="nav-link" href="#job-experience" data-section="job-experience">Experience</a></li>
         <li><a class="nav-link" href="#certifications" data-section="certifications">Certifications</a></li>
-        <li><a class="nav-link" href="#activities" data-section="activities">Activities</a></li>
-        <li><a class="nav-link" href="#interests" data-section="interests">Interests</a></li>
+        <li><a class="nav-link" href="#hobbies" data-section="hobbies">Hobbies</a></li>
         <li><a class="nav-link" href="#contact" data-section="contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <!-- ========== HERO ========== -->
     <section class="hero" id="hero" data-section-id="hero">
-      <div class="hero__aurora" aria-hidden="true"></div>
-      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__quiet" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__eyebrow reveal" data-reveal>Statistics &amp; Machine Learning · Carnegie Mellon University</p>
-          <h1 class="hero__name reveal" data-reveal data-reveal-delay="60">
-            <span class="hero__name-line">Linfeng (Ryan) Zhou</span>
-          </h1>
-          <p class="hero__tagline reveal" data-reveal data-reveal-delay="120">
-            Building judgment at the intersection of strategy, data, and execution.
+          <p class="hero__eyebrow reveal" data-reveal>Statistics &amp; Machine Learning · Carnegie Mellon</p>
+          <p class="hero__tagline reveal" data-reveal data-reveal-delay="80">
+            Strategy, data, and disciplined execution—consulting and business-facing roles.
           </p>
-          <p class="hero__intro reveal" data-reveal data-reveal-delay="180">
-            First-year student recruiting for consulting, analytics, and business-facing roles—comfortable with ambiguity,
-            quantitative rigor, and operator-level follow-through from research support to founder-led initiatives.
+          <p class="hero__intro reveal" data-reveal data-reveal-delay="140">
+            First-year student with internships, research support, and founder-led projects spanning law, education,
+            consumer brands, music events, and youth sports.
           </p>
-          <p class="hero__cred reveal" data-reveal data-reveal-delay="200">
-            B.S. Statistics &amp; Machine Learning · Dean’s List · GPA 4.0/4.0
-          </p>
-          <div class="hero__actions reveal" data-reveal data-reveal-delay="240">
-            <a class="btn btn--primary" href="#job-experience">View Experience</a>
-            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          <p class="hero__cred reveal" data-reveal data-reveal-delay="180">Dean’s List · GPA 4.0/4.0</p>
+          <div class="hero__actions reveal" data-reveal data-reveal-delay="220">
+            <a class="btn btn--primary" href="#job-experience">Experience</a>
+            <a class="btn btn--ghost" href="#contact">Contact</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== JOB EXPERIENCE ========== -->
+    <!-- ========== EXPERIENCE (intern / professional vs venture) ========== -->
     <section class="section section--alt" id="job-experience" data-section-id="job-experience">
       <div class="container">
         <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Job Experience</h2>
-          <p class="section__subtitle">Internships, research, and professional roles—structured for quick scanning.</p>
+          <h2 class="section__title">Experience</h2>
+          <p class="section__subtitle">Roles and ventures—each entry is a short, concrete snapshot.</p>
         </header>
 
+        <div class="type-legend reveal" data-reveal aria-label="Experience type key">
+          <span class="type-legend__item type-legend__item--intern"><span class="type-legend__swatch"></span> Internship &amp; professional roles</span>
+          <span class="type-legend__item type-legend__item--venture"><span class="type-legend__swatch"></span> Founder-led &amp; venture projects</span>
+        </div>
+
         <ol class="timeline">
-          <li class="timeline__item reveal" data-reveal>
-            <article class="exp-card">
-              <div class="exp-card__head">
-                <h3 class="exp-card__title">Market Research Intern</h3>
-                <p class="exp-card__org">Fumount — boutique incense brand (China)</p>
-                <p class="exp-card__meta">Shenzhen, China · Apr 2025 – Present</p>
-              </div>
-              <ul class="bullet-list">
-                <li>Supported online marketing campaigns that generated roughly 1M RMB cumulative turnover through private-domain traffic channels.</li>
-                <li>Researched the Shopify ecosystem to inform overseas expansion strategy for the brand.</li>
-                <li>Led a technical team to build the company website with HTML, CSS, and JavaScript—using AI-assisted workflows and GitHub-based collaboration to improve delivery speed.</li>
-                <li>Benchmarked domestic competitors on pricing, market size, and consumer profiles; helped define a premium, customized overseas positioning.</li>
-                <li>Coordinated with e-commerce platforms and industry KOLs for partnerships, private-domain growth, and promotions that exceeded sales expectations.</li>
-              </ul>
+          <li class="timeline__item reveal" data-reveal data-type="intern">
+            <article class="exp-card exp-card--intern">
+              <span class="exp-card__badge">Internship</span>
+              <h3 class="exp-card__title">Market Research Intern</h3>
+              <p class="exp-card__org">Fumount — boutique incense brand</p>
+              <p class="exp-card__meta">Shenzhen · Apr 2025 – Present</p>
+              <p class="exp-card__desc">
+                Ran private-domain campaigns (~1M RMB turnover), researched Shopify-led overseas expansion, led a small team to ship the company site (HTML/CSS/JS + GitHub workflows), and coordinated KOL partnerships and competitive positioning.
+              </p>
             </article>
           </li>
 
-          <li class="timeline__item reveal" data-reveal>
-            <article class="exp-card">
-              <div class="exp-card__head">
-                <h3 class="exp-card__title">Research Assistant</h3>
-                <p class="exp-card__org">CMU Human-Computer Interaction Institute — Augmented Design Lab</p>
-                <p class="exp-card__meta">Pittsburgh, PA · Jan 2025 – Present</p>
-              </div>
-              <ul class="bullet-list">
-                <li>Supports HCI research through disciplined study coordination, survey distribution, and high-quality data collection.</li>
-                <li>Manages participant touchpoints, tracks responses across study phases, and collates experimental outputs.</li>
-                <li>Organizes and preprocesses datasets for analysis with consistent documentation and quality control.</li>
-                <li>Collaborates with researchers to streamline protocols and improve end-to-end data collection workflows.</li>
-              </ul>
+          <li class="timeline__item reveal" data-reveal data-type="intern">
+            <article class="exp-card exp-card--intern">
+              <span class="exp-card__badge">Research role</span>
+              <h3 class="exp-card__title">Research Assistant</h3>
+              <p class="exp-card__org">CMU HCII — Augmented Design Lab</p>
+              <p class="exp-card__meta">Pittsburgh · Jan 2025 – Present</p>
+              <p class="exp-card__desc">
+                Coordinates HCI studies: surveys, participant touchpoints, clean datasets, and tighter protocols so research teams can analyze with confidence.
+              </p>
             </article>
           </li>
 
-          <li class="timeline__item reveal" data-reveal>
-            <article class="exp-card">
-              <div class="exp-card__head">
-                <h3 class="exp-card__title">Project Manager — Student Interview Program</h3>
-                <p class="exp-card__org">Lighten Education</p>
-                <p class="exp-card__meta">Shenzhen, China · Apr 2025 – Sep 2025</p>
-              </div>
-              <ul class="bullet-list">
-                <li>Led development of a student interview content initiative from concept through distribution.</li>
-                <li>Designed long-form interview formats aligned with audience needs and brand standards.</li>
-                <li>Owned filming, editing, and logistics—coordinating contributors to ship on schedule.</li>
-                <li>Achieved roughly 50–60% average completion rates across targeted private distribution channels.</li>
-              </ul>
+          <li class="timeline__item reveal" data-reveal data-type="intern">
+            <article class="exp-card exp-card--intern">
+              <span class="exp-card__badge">Program / PM</span>
+              <h3 class="exp-card__title">Project Manager — Student Interview Program</h3>
+              <p class="exp-card__org">Lighten Education</p>
+              <p class="exp-card__meta">Shenzhen · Apr – Sep 2025</p>
+              <p class="exp-card__desc">
+                Owned an interview content initiative end-to-end—format design, filming and editing, contributor coordination, and distribution that held ~50–60% completion in private channels.
+              </p>
             </article>
           </li>
 
-          <li class="timeline__item reveal" data-reveal>
-            <article class="exp-card">
-              <div class="exp-card__head">
-                <h3 class="exp-card__title">Law Assistant</h3>
-                <p class="exp-card__org">China Commercial Lam Lee Lai Law Firm</p>
-                <p class="exp-card__meta">Shenzhen, China · Jan 2025 – Mar 2025</p>
-              </div>
-              <ul class="bullet-list">
-                <li>Analyzed bottlenecks in internal client data and document retrieval processes.</li>
-                <li>Supported partners in launching a self-service access system to reduce manual approvals and improve retrieval efficiency.</li>
-                <li>Standardized document management and tracking protocols—improving transparency and turnaround time.</li>
-                <li>Reduced average document retrieval effort by roughly 20 minutes per employee per day.</li>
-              </ul>
+          <li class="timeline__item reveal" data-reveal data-type="intern">
+            <article class="exp-card exp-card--intern">
+              <span class="exp-card__badge">Internship</span>
+              <h3 class="exp-card__title">Law Assistant</h3>
+              <p class="exp-card__org">China Commercial Lam Lee Lai Law Firm</p>
+              <p class="exp-card__meta">Shenzhen · Jan – Mar 2025</p>
+              <p class="exp-card__desc">
+                Mapped bottlenecks in document retrieval, helped roll out a self-service access model with partners, standardized tracking, and cut repetitive retrieval time by ~20 minutes per person per day.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline__item reveal" data-reveal data-type="venture">
+            <article class="exp-card exp-card--venture">
+              <span class="exp-card__badge">Venture</span>
+              <h3 class="exp-card__title">Founder — Youth Music Platform &amp; Festival-scale Events</h3>
+              <p class="exp-card__org">YouMe Youth Music</p>
+              <p class="exp-card__meta">Shenzhen · Feb 2025 – Present</p>
+              <p class="exp-card__desc">
+                Built a nonprofit platform connecting student musicians with venues and sponsors; produced 11 offline events including a 1,000+ person flagship, grew a 400+ member community, and scaled to four cities with local teams.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline__item reveal" data-reveal data-type="venture">
+            <article class="exp-card exp-card--venture">
+              <span class="exp-card__badge">Venture</span>
+              <h3 class="exp-card__title">Founder — Youth Basketball Program</h3>
+              <p class="exp-card__org">HuaLong Youth Basketball Boot Camp</p>
+              <p class="exp-card__meta">HuaLong · Apr 2023 – Present</p>
+              <p class="exp-card__desc">
+                Founded and runs a youth camp end-to-end—curriculum, coaches, volunteers, and operations—serving 300+ students with a city-level championship outcome.
+              </p>
             </article>
           </li>
         </ol>
@@ -154,115 +162,98 @@
       <div class="container">
         <header class="section__header reveal" data-reveal>
           <h2 class="section__title">Certifications</h2>
-          <p class="section__subtitle">Virtual programs and simulations—consulting, analytics, and applied data science.</p>
+          <p class="section__subtitle">Virtual programs — consulting simulations and applied analytics.</p>
         </header>
+
+        <div class="type-legend type-legend--cert reveal" data-reveal>
+          <span class="type-legend__item type-legend__item--cert"><span class="type-legend__swatch"></span> Certification &amp; virtual programs</span>
+        </div>
 
         <div class="cert-grid">
-          <article class="cert-card reveal" data-reveal>
-            <div class="cert-card__accent" aria-hidden="true"></div>
+          <article class="cert-card cert-card--cert reveal" data-reveal>
+            <span class="cert-card__badge">Certification</span>
             <h3 class="cert-card__name">PwC Management Consulting Virtual Project</h3>
             <p class="cert-card__issuer">PwC · Online</p>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Due diligence for a simulated M&amp;A project: business and financial analysis, transaction risks, and synergy value.</li>
-              <li>Delivered a 14-slide analytical deck with forecasting models, scenario analysis, and executive-ready progress updates.</li>
-              <li>Exposure to flexible modeling and concise structured communication across workstreams.</li>
-            </ul>
+            <p class="cert-card__desc">
+              M&amp;A-style diligence, 14-slide storyline, forecasting and scenarios, and concise executive updates across a simulated engagement.
+            </p>
           </article>
 
-          <article class="cert-card reveal" data-reveal>
-            <div class="cert-card__accent" aria-hidden="true"></div>
-            <h3 class="cert-card__name">Oliver Wyman Integrated Consulting Group Virtual Project</h3>
-            <p class="cert-card__issuer">Oliver Wyman · Global insurance client · Online</p>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Business diagnostics and financial statement analysis using regression and variance-style methods to explain performance gaps.</li>
-              <li>Built a client-facing visual dashboard and compiled findings into a formal presentation deck.</li>
-            </ul>
+          <article class="cert-card cert-card--cert reveal" data-reveal>
+            <span class="cert-card__badge">Certification</span>
+            <h3 class="cert-card__name">Oliver Wyman ICG Virtual Project</h3>
+            <p class="cert-card__issuer">Global insurance client · Online</p>
+            <p class="cert-card__desc">
+              Financial diagnostics with regression / variance analysis, client-facing dashboard, and board-ready deck summarizing implications.
+            </p>
           </article>
 
-          <article class="cert-card reveal" data-reveal>
-            <div class="cert-card__accent" aria-hidden="true"></div>
+          <article class="cert-card cert-card--cert reveal" data-reveal>
+            <span class="cert-card__badge">Certification</span>
             <h3 class="cert-card__name">Lloyds Banking Group Virtual Project</h3>
-            <p class="cert-card__issuer">Lloyds Banking Group · Online</p>
-            <ul class="bullet-list bullet-list--compact">
-              <li>End-to-end customer churn workflow: preprocessing, feature engineering, and modeling in Python (pandas, scikit-learn).</li>
-              <li>Random Forest with tuning and feature-importance analysis; ROC-AUC 0.82.</li>
-              <li>Translated model outputs into practical business-facing insights.</li>
-            </ul>
+            <p class="cert-card__issuer">Lloyds · Online</p>
+            <p class="cert-card__desc">
+              Churn modeling in Python (pandas, scikit-learn): Random Forest, tuning, feature importance, ROC-AUC 0.82, translated into business recommendations.
+            </p>
           </article>
 
-          <article class="cert-card reveal" data-reveal>
-            <div class="cert-card__accent" aria-hidden="true"></div>
+          <article class="cert-card cert-card--cert reveal" data-reveal>
+            <span class="cert-card__badge">Certification</span>
             <h3 class="cert-card__name">BCG X Data Science Virtual Project</h3>
-            <p class="cert-card__issuer">BCG X · PowerCo churn scenario · Online</p>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Data cleaning and EDA in Python; handled missing values and outliers; structured data for modeling.</li>
-              <li>Built models to predict churn for PowerCo; analyzed drivers including pricing, service quality, and regional effects.</li>
-              <li>Evaluated performance and delivered a client-style summary with data-driven recommendations.</li>
-            </ul>
+            <p class="cert-card__issuer">PowerCo churn · Online</p>
+            <p class="cert-card__desc">
+              End-to-end churn analytics: cleaning, EDA, modeling, evaluation, and a client-style narrative on drivers and next steps.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ========== ACTIVITIES ========== -->
-    <section class="section section--alt" id="activities" data-section-id="activities">
+    <!-- ========== HOBBIES (image slots reserved) ========== -->
+    <section class="section section--alt section--hobbies" id="hobbies" data-section-id="hobbies">
       <div class="container">
         <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Activities</h2>
-          <p class="section__subtitle">Leadership, initiative, and community building outside of formal employment.</p>
+          <h2 class="section__title">Hobbies</h2>
+          <p class="section__subtitle">Beyond work—athletics, music, events, and visual craft. Photo placeholders below; swap in your images anytime.</p>
         </header>
 
-        <div class="activity-grid">
-          <article class="activity-card reveal" data-reveal>
-            <div class="activity-card__icon" aria-hidden="true">◇</div>
-            <h3 class="activity-card__title">Founder</h3>
-            <p class="activity-card__org">YouMe Youth Music</p>
-            <p class="activity-card__meta">Shenzhen, China · Feb 2025 – Present</p>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Founded a student musician platform connecting bands with venues, brands, and sponsors (non-profit).</li>
-              <li>Led recruitment, partnerships, event planning, on-site execution, and monetization experiments.</li>
-              <li>Delivered 11 offline events, including a flagship with 1,000+ attendees; grew a 400+ member community.</li>
-              <li>Scaled to four cities through decentralized local organizing teams.</li>
-            </ul>
+        <div class="hobbies-grid">
+          <article class="hobby-card reveal" data-reveal>
+            <div class="hobby-card__frame">
+              <!-- Replace src when ready: <img src="assets/hobby-u19.jpg" alt="…" /> -->
+              <div class="hobby-card__placeholder">Image · U19 athletics</div>
+            </div>
+            <p class="hobby-card__text">
+              <strong>U19 athlete</strong> — competitive training and team play; discipline, pace, and consistency under pressure.
+            </p>
           </article>
 
-          <article class="activity-card reveal" data-reveal>
-            <div class="activity-card__icon" aria-hidden="true">◆</div>
-            <h3 class="activity-card__title">Founder</h3>
-            <p class="activity-card__org">HuaLong Youth Basketball Boot Camp</p>
-            <p class="activity-card__meta">HuaLong, China · Apr 2023 – Present</p>
-            <ul class="bullet-list bullet-list--compact">
-              <li>Founded and operated a youth basketball camp with accountability for programming quality and safety.</li>
-              <li>Designed curricula and executed sessions with consistent standards week to week.</li>
-              <li>Coordinated coaches, volunteers, logistics, and day-of operations for a growing participant base.</li>
-              <li>Supported 300+ students; program culminated in a city-level championship outcome.</li>
-            </ul>
+          <article class="hobby-card reveal" data-reveal data-reveal-delay="60">
+            <div class="hobby-card__frame">
+              <div class="hobby-card__placeholder">Image · Band / performance</div>
+            </div>
+            <p class="hobby-card__text">
+              <strong>Band &amp; live music</strong> — performing with a group; arranging rehearsal, tone, and stage energy.
+            </p>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ========== INTERESTS ========== -->
-    <section class="section" id="interests" data-section-id="interests">
-      <div class="container">
-        <header class="section__header reveal" data-reveal>
-          <h2 class="section__title">Interests</h2>
-          <p class="section__subtitle">Personal dimensions that complement analytical and professional work.</p>
-        </header>
+          <article class="hobby-card reveal" data-reveal data-reveal-delay="120">
+            <div class="hobby-card__frame">
+              <div class="hobby-card__placeholder">Image · Festival / events</div>
+            </div>
+            <p class="hobby-card__text">
+              <strong>Music festival project</strong> — founded and scaled festival-scale youth music events (see YouMe Youth Music in Experience).
+            </p>
+          </article>
 
-        <div class="interests-wrap reveal" data-reveal>
-          <ul class="interest-tags" aria-label="Personal interests">
-            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Basketball</li>
-            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Electric guitar</li>
-            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Sailing</li>
-            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Eastern art</li>
-            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Music &amp; live events</li>
-            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Branding &amp; positioning</li>
-            <li class="interest-tag"><span class="interest-tag__glow" aria-hidden="true"></span>Business strategy</li>
-          </ul>
-          <p class="interests-note">
-            Languages: Mandarin (native) · English (fluent, TOEFL 114/120)
-          </p>
+          <article class="hobby-card reveal" data-reveal data-reveal-delay="180">
+            <div class="hobby-card__frame">
+              <div class="hobby-card__placeholder">Image · Calligraphy &amp; art</div>
+            </div>
+            <p class="hobby-card__text">
+              <strong>Art &amp; calligraphy (书法)</strong> — ink, composition, and patience—visual thinking that balances structure and expression.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -272,7 +263,7 @@
       <div class="container">
         <header class="section__header reveal" data-reveal>
           <h2 class="section__title">Contact</h2>
-          <p class="section__subtitle">Open to internships and conversations in consulting, analytics, and strategy.</p>
+          <p class="section__subtitle">Consulting, analytics, and strategy conversations welcome.</p>
         </header>
 
         <div class="contact-panel reveal" data-reveal>
@@ -294,9 +285,10 @@
               <a href="https://github.com/Linfeng-Zhou" target="_blank" rel="noopener noreferrer">github.com/Linfeng-Zhou</a>
             </li>
           </ul>
+          <p class="contact-lang">Languages: Mandarin (native) · English (fluent, TOEFL 114/120)</p>
           <div class="contact-actions">
             <a class="btn btn--primary" href="mailto:zhouryan63@gmail.com?subject=Hello%20Ryan">Email me</a>
-            <a class="btn btn--ghost" href="#hero">Back to top</a>
+            <a class="btn btn--ghost" href="#hero">Home</a>
           </div>
         </div>
       </div>
